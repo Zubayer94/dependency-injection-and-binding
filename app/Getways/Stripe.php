@@ -9,7 +9,7 @@ class Stripe implements PaymentGetwayInterface
     public function pay(int $amount): array
     {
         return [
-            'id' => uniqid(),
+            'id' => \Str::random(40),
             'amount' => $amount,
             'created_at' => now(),
         ];
